@@ -38,7 +38,7 @@ const Coctails = () => {
 
   return (
     <div className="main">
-      <h1>Cocktails API</h1>
+      <h1>Cocktails API </h1>
 
       <div className="drinksContainer">
         {cocktails.map((item) => {
