@@ -6,7 +6,7 @@ const Coctails = () => {
   const [cocktails, setCocktails] = useState([]);
   // const [searchTerm, setSearchTerm] = useState('a');
 
-  const fetchDrinks = useCallback(async () => {
+  const fetchDrinks = async () => {
     try {
       const { data } = await axios.get(url);
       const { drinks } = data;
@@ -28,13 +28,13 @@ const Coctails = () => {
     } catch (error) {
       console.log(error.response);
     }
-  });
+  };
 
   // console.log(cocktails);
 
   useEffect(() => {
     fetchDrinks();
-  }, [fetchDrinks]);
+  }, []);
 
   return (
     <div className="main">
@@ -44,7 +44,7 @@ const Coctails = () => {
         {cocktails.map((item) => {
           return (
             <div key={item.id} className="singleDrink">
-              <img src={item.image} alt="drink-image" />
+              <img src={item.image} alt="singleDrink" />
               <h3>{item.name}</h3>
               <p> {item.category} </p>
             </div>
