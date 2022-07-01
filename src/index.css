@@ -1,13 +1,109 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  border: 0;
+  /* box-sizing: border-box; */
+  font-family: 'Poppins', sans-serif;
+  scrollbar-width: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  text-align: center;
+  width: 90vw;
+}
+
+h1 {
+  color: rgb(95, 6, 6);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-top: 1rem;
+  color: rgb(91, 87, 87);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  background-color: rgb(173, 2, 2);
+  color: white;
+  border-radius: 0.2rem;
+}
+
+button:hover {
+  background-color: rgb(74, 3, 3);
+  transition: all linear 0.5s;
+}
+
+input {
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.todo-btn {
+  background-color: rgb(0, 0, 0);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.65rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.capitalizeText {
+  text-transform: capitalize;
+}
+
+.drinksContainer {
+  width: 80vw;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 5fr 5fr 5fr;
+  grid-template-rows: 5fr 5fr 5fr;
+}
+
+.singleDrink img {
+  width: 12rem;
+  border-radius: 1rem;
+}
+
+.smallFlex {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.smallFlex h3 {
+  display: inline-block;
+  width: 50vw;
+  margin-bottom: 1rem;
+}
+.smallBtn {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  margin: 0.5rem;
+  background-color: rgb(173, 2, 2);
+  color: white;
+  border-radius: 0.2rem;
 }
